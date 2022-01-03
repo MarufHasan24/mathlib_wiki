@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--Code by Maruf hasan-->
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1></h1>
+    <div class="container">
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+    </div>
+  </body>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .container {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+      background: #333;
+    }
+    .container .ring {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 25vh;
+      width: 25vh;
+      background: transparent;
+      border: 5px solid transparent;
+      border-top-color: snow;
+      border-radius: 50%;
+      animation: loader 4s linear infinite;
+    }
+    .container .ring::before {
+      content: "";
+      height: 2vh;
+      width: 2vh;
+      right: 1.7vh;
+      background: snow;
+      border-radius: 50%;
+      top: 2.9vh;
+      position: absolute;
+    }
+    .container .ring:nth-child(2) {
+      position: absolute;
+      margin-top: -25vh;
+      animation: loader 4s linear infinite -2.1s reverse;
+    }
+    .container .ring:nth-child(2)::before {
+      content: "";
+      height: 2vh;
+      width: 2vh;
+      right: 19.1vh;
+      border-radius: 50%;
+      top: 1.8vh;
+      background: snow;
+      position: absolute;
+    }
+    @keyframes loader {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</html>
