@@ -312,7 +312,7 @@
   },
   "polyArea": {
     "title": "polyArea",
-    "des": "<i style=\"font-size:18px; color: red;\">arange the dots at clockwise</i>",
+    "des": "<i style=\"font-size:18px; color: red;\">arange the dots at anti-clockwise</i>",
     "input": {
       "data": ["dots (at least 3 arrays)"],
       "Type": [

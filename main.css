@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: scroll;
+  -webkit-tap-highlight-color: transparent;
+  -moz-tap-highlight-color: transparent;
+  -o-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+  position: relative;
+  font-family: "balo";
+  letter-spacing: 1px;
+  scrollbar-width: 0;
+  transition: 0.5s;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+logo {
+  height: 5vh;
+  width: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+logo img {
+  height: 5vh;
+  width: 5vh;
+  position: relative;
+}

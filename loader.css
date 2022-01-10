@@ -1,0 +1,94 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "balo";
+  font-weight: 100;
+  scroll-behavior: smooth;
+  transition: 0.5s;
+}
+.body {
+  display: none;
+}
+.loader {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(50, 50, 50);
+}
+.loader .firstBar,
+.loader .secondBar {
+  background-color: cyan;
+  position: absolute;
+  height: 20vh;
+  width: 2.5vh;
+  border-radius: 1.25vh;
+  box-shadow: 0.5vh 0.5vh 1vh rgba(0, 255, 255, 0.5),
+    -0.5vh 0.5vh 10px rgba(0, 255, 255, 0.5),
+    0.5vh -0.5vh 10px rgba(0, 255, 255, 0.5),
+    -0.5vh -0.5vh 10px rgba(0, 255, 255, 0.5);
+}
+.loader .firstBar {
+  transform: rotate(135deg);
+  animation: firstBar 4s cubic-bezier(0.75, 0.05, 0.25, 1) infinite;
+}
+.loader .secondBar {
+  transform: rotate(255deg);
+  animation: secondBar 4s cubic-bezier(0.75, 0.05, 0.25, 1) infinite;
+}
+@keyframes firstBar {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  25% {
+    transform: rotateZ(90deg);
+  }
+  50% {
+    transform: rotateZ(135deg);
+  }
+  75% {
+    transform: rotateZ(225deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes secondBar {
+  0% {
+    transform: rotateZ(90deg);
+  }
+  25% {
+    transform: rotateZ(90deg);
+  }
+  50% {
+    transform: rotateZ(225deg);
+  }
+  75% {
+    transform: rotateZ(225deg);
+  }
+  100% {
+    transform: rotateZ(450deg);
+  }
+}
+@font-face {
+  font-family: merriBold;
+  src: url("./fonts/Merriweather-Regular.ttf");
+}
+@font-face {
+  font-family: Balsam;
+  src: url("./fonts/BalsamiqSans-Regular.ttf");
+}
+@font-face {
+  font-family: balo;
+  src: url("./fonts/Baloo2-Regular.ttf");
+}
+@font-face {
+  font-family: merri;
+  src: url("./fonts/Merriweather-Light.ttf");
+}
+@font-face {
+  font-family: "lato";
+  src: url("./fonts/lato.ttf");
+}
