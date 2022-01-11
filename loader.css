@@ -1,11 +1,44 @@
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  font-family: "balo";
-  font-weight: 100;
+  -webkit-tap-highlight-color: transparent;
+  -moz-tap-highlight-color: transparent;
+  -o-tap-highlight-color: transparent;
   scroll-behavior: smooth;
+  position: relative;
+  font-family: "balo";
+  letter-spacing: 1px;
+  scrollbar-width: 0;
   transition: 0.5s;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+logo {
+  height: 5vh;
+  width: 5vh;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+}
+logo img {
+  height: 7vh;
+  width: 7vh;
+  position: relative;
+}
+@media (min-width: 720px) {
+  logo {
+    height: 7vw;
+    width: 7vw;
+  }
+  logo img {
+    height: 7vw;
+    width: 7vw;
+    position: relative;
+  }
 }
 .body {
   display: none;

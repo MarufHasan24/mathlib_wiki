@@ -18,7 +18,6 @@ fetch("tableData.json")
       let trs = document.querySelectorAll(".content-table table tr.Tbdy")[i];
       let dataTitle = trs.dataset.title;
       let des = data[dataTitle].des ? `<br />(${data[dataTitle].des})` : "";
-      console.log(des, i);
       let inputDataArray = data[dataTitle].input.data;
       var inputString = "";
       var workString = `${data[dataTitle].work.Mwork[0].toUpperCase()}${data[
@@ -81,13 +80,3 @@ function nightMoodChange() {
   };
 }
 nightMoodChange();
-
-/* "":{
-  "title" : "",
-    "input":{
-      "data":[]
-    },"work":{
-      "Mwork" : "",
-      "work": ""
-    } 
-  } */

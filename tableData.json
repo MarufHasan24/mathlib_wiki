@@ -173,14 +173,16 @@
       "work": "feet into meter"
     }
   },
-  "frac": {
-    "title": "frac",
+  "fract": {
+    "title": "fract",
     "input": {
-      "data": [""]
+      "data": ["input"],
+      "Type": ["a float type number"]
     },
     "work": {
-      "Mwork": "",
-      "work": ""
+      "Mwork": "convert",
+      "work": "decimal number into fractional number",
+      "Rtype": "a string"
     }
   },
   "in2Cm": {
@@ -342,6 +344,20 @@
     "work": {
       "Mwork": "convert",
       "work": "degree into decimal"
+    }
+  },
+  "lineWidth": {
+    "title": "lineWidth",
+    "input": {
+      "data": ["first_point", "second_point"],
+      "Type": [
+        "an array contains the value of x coordinate and y coordinate. like : [x,y]",
+        "an array contains the value of x coordinate and y coordinate. like : [x,y]"
+      ]
+    },
+    "work": {
+      "Mwork": "measure",
+      "work": "distance of that 2 dots"
     }
   }
 }
