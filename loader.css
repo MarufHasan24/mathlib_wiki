@@ -9,7 +9,8 @@
   position: relative;
   font-family: "balo";
   letter-spacing: 1px;
-  scrollbar-width: 0;
+  -ms-overflow-style: none; 
+  scrollbar-width: none;  
   transition: 0.5s;
 }
 
