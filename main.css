@@ -1,32 +1,132 @@
-* {
+div.author {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  overflow: scroll;
-  -webkit-tap-highlight-color: transparent;
-  -moz-tap-highlight-color: transparent;
-  -o-tap-highlight-color: transparent;
-  scroll-behavior: smooth;
-  position: relative;
-  font-family: "balo";
-  letter-spacing: 1px;
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-  transition: 0.5s;
+  color: #fff;
+  font-family: "lato";
+  width: 100vw;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgba(34, 34, 34, 0.6);
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-image: url("authorBg.jpg");
 }
-
-*::-webkit-scrollbar {
-  display: none;
+div.author div.text {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: left;
 }
-logo {
-  height: 5vh;
-  width: 5vh;
+div.author div.text h2.heading2 {
+  width: auto;
+  color: #fff;
+  font-family: "lato";
+  margin: 0%;
+  padding: 1%;
+  text-align: left;
+}
+div.author div.text h2.heading2 .helloWorld {
+  font-family: "reliway";
+  font-size: 15vh;
+  text-transform: capitalize;
+  white-space: nowrap;
+  text-align: left;
+}
+div.author div.text h2.heading2 .iAmMaruf {
+  font-family: "reliway";
+  font-weight: 400;
+  font-size: 5vh;
+  text-align: left;
+}
+div.author div.img {
+  padding: 0;
+  margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #ffd;
+  height: 100%;
+  width: 25%;
+  object-fit: cover;
 }
-logo img {
-  height: 5vh;
-  width: 5vh;
+div.author div.img img {
+  height: auto;
+  width: 100%;
+}
+@media (max-width: 720px) {
+  div.author div.text h2.heading2 .helloWorld {
+    font-size: 15vw;
+  }
+  div.author div.text h2.heading2 .iAmMaruf {
+    font-size: 5vw;
+  }
+}
+div.author div.text section.typing {
+  padding: 1%;
+  font-size: 5vh;
+  display: inline-flex;
+  flex-direction: row;
+}
+div.author div.text section.typing div {
+  overflow: hidden;
+  height: 8vh;
+  transition: none;
+}
+div.author div.text section.typing div ul.list {
+  padding-left: 5px;
+  list-style: none;
+  overflow: hidden;
+  transition: none;
+  animation: slide 24s steps(4) infinite;
+}
+div.author div.text section.typing div ul.list li {
   position: relative;
+  color: transparent;
+  white-space: nowrap;
+  overflow: hidden;
+  top: 0%;
+  transition: none;
+}
+div.author div.text section.typing div ul.list li span {
+  overflow: hidden;
+  transition: none;
+}
+div.author div.text section.typing div ul.list li span::before {
+  content: attr(data-text);
+  position: absolute;
+  height: 100%;
+  width: auto;
+  color: #fff;
+  border-right: aqua solid 3px;
+  left: 0;
+  overflow: hidden;
+  animation: typeing 3s linear infinite;
+  transition: none;
+}
+@keyframes typeing {
+  0%,
+  100% {
+    width: 0%;
+  }
+  50% {
+    width: 105%;
+  }
+}
+@keyframes slide {
+  0%,
+  100% {
+    top: 0%;
+  }
+  50% {
+    top: -400%;
+  }
+}
+@media (max-width: 720px) {
+  div.author div.text section.typing div {
+    overflow: hidden;
+    height: 8vw;
+    transition: none;
+  }
 }

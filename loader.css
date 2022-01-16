@@ -9,13 +9,23 @@
   position: relative;
   font-family: "balo";
   letter-spacing: 1px;
-  -ms-overflow-style: none; 
-  scrollbar-width: none;  
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  scrollbar-width: 0;
   transition: 0.5s;
 }
 
 *::-webkit-scrollbar {
   display: none;
+}
+
+body,
+div.body {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  overflow: scroll;
 }
 logo {
   height: 5vh;
@@ -31,8 +41,7 @@ logo img {
   position: relative;
 }
 h1 {
-  padding: 1%;
-  margin: 1%;
+  padding: 2%;
   width: auto;
   height: auto;
   align-items: center;
@@ -145,8 +154,8 @@ h1 a:hover {
   }
 }
 @font-face {
-  font-family: merriBold;
-  src: url("./fonts/Merriweather-Regular.ttf");
+  font-family: raleway;
+  src: url("./fonts/Raleway-SemiBold.ttf");
 }
 @font-face {
   font-family: Balsam;
@@ -158,9 +167,9 @@ h1 a:hover {
 }
 @font-face {
   font-family: merri;
-  src: url("./fonts/Merriweather-Light.ttf");
+  src: url("./fonts/Merriweather-Regular.ttf");
 }
 @font-face {
   font-family: "lato";
-  src: url("./fonts/Lato.ttf");
+  src: url("./fonts/lato.ttf");
 }
