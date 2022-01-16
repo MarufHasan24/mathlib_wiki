@@ -99,10 +99,11 @@ div.author div.text section.typing div ul.list li span::before {
   height: 100%;
   width: auto;
   color: #fff;
-  border-right: aqua solid 3px;
+  margin: 1% 0%;
+  border-right: aqua solid 1px;
   left: 0;
   overflow: hidden;
-  animation: typeing 3s linear infinite;
+  animation: typeing 3s steps(var(--i)) infinite;
   transition: none;
 }
 @keyframes typeing {
@@ -110,8 +111,9 @@ div.author div.text section.typing div ul.list li span::before {
   100% {
     width: 0%;
   }
-  50% {
-    width: 105%;
+  45%,
+  55% {
+    width: 100%;
   }
 }
 @keyframes slide {
