@@ -4,6 +4,7 @@ div.author {
   color: #fff;
   font-family: "lato";
   width: 100vw;
+  overflow: hidden;
   height: auto;
   display: flex;
   align-items: center;
@@ -16,7 +17,7 @@ div.author {
 div.author div.text {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  flex-direction: column;
   justify-content: left;
 }
 div.author div.text h2.heading2 {
@@ -27,41 +28,18 @@ div.author div.text h2.heading2 {
   padding: 1%;
   text-align: left;
 }
-div.author div.text h2.heading2 .helloWorld {
+div.author div.text h2.heading2 span.helloWorld {
   font-family: "reliway";
   font-size: 15vh;
   text-transform: capitalize;
   white-space: nowrap;
   text-align: left;
 }
-div.author div.text h2.heading2 .iAmMaruf {
+div.author div.text h2.heading2 span.iAmMaruf {
   font-family: "reliway";
   font-weight: 400;
   font-size: 5vh;
   text-align: left;
-}
-div.author div.img {
-  padding: 0;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #ffd;
-  height: 100%;
-  width: 25%;
-  object-fit: cover;
-}
-div.author div.img img {
-  height: auto;
-  width: 100%;
-}
-@media (max-width: 720px) {
-  div.author div.text h2.heading2 .helloWorld {
-    font-size: 15vw;
-  }
-  div.author div.text h2.heading2 .iAmMaruf {
-    font-size: 5vw;
-  }
 }
 div.author div.text section.typing {
   padding: 1%;
@@ -69,19 +47,19 @@ div.author div.text section.typing {
   display: inline-flex;
   flex-direction: row;
 }
-div.author div.text section.typing div {
+div.author div.text section.typing div.typeAnimation {
   overflow: hidden;
   height: 8vh;
   transition: none;
 }
-div.author div.text section.typing div ul.list {
+div.author div.text section.typing div.typeAnimation ul.list {
   padding-left: 5px;
   list-style: none;
   overflow: hidden;
   transition: none;
   animation: slide 24s steps(4) infinite;
 }
-div.author div.text section.typing div ul.list li {
+div.author div.text section.typing div.typeAnimation ul.list li {
   position: relative;
   color: transparent;
   white-space: nowrap;
@@ -89,11 +67,12 @@ div.author div.text section.typing div ul.list li {
   top: 0%;
   transition: none;
 }
-div.author div.text section.typing div ul.list li span {
+div.author div.text section.typing div.typeAnimation ul.list li span {
   overflow: hidden;
   transition: none;
+  padding: 0% 1%;
 }
-div.author div.text section.typing div ul.list li span::before {
+div.author div.text section.typing div.typeAnimation ul.list li span::before {
   content: attr(data-text);
   position: absolute;
   height: 100%;
@@ -105,6 +84,126 @@ div.author div.text section.typing div ul.list li span::before {
   overflow: hidden;
   animation: typeing 3s steps(var(--i)) infinite;
   transition: none;
+}
+div.author div.imageBox {
+  padding: 1vh;
+}
+div.author div.imageBox section.container {
+  position: relative;
+  overflow: hidden;
+  width: 40vh;
+  height: 48vh;
+}
+div.author div.imageBox section.container div.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 48vh;
+  width: 160vh;
+  animation: imageSlide 30s linear infinite;
+}
+div.author div.imageBox section.container div.slider div.image {
+  position: relative;
+  height: 48vh;
+  width: 40vh;
+  float: left;
+}
+div.author div.imageBox section.container div.slider div.image.img1 {
+  background: url("./../website/kpc2021.jpg");
+  background-position: center;
+  background-size: cover;
+}
+div.author div.imageBox section.container div.slider div.image.img2 {
+  background: url("./../website/authorBg.jpg");
+  background-position: center;
+  background-size: cover;
+}
+div.author div.imageBox section.container div.slider div.image.img3 {
+  background: url("./../website/MathlibLogo.jpg");
+  background-position: center;
+  background-size: cover;
+}
+div.author div.text div.more {
+  color: #fff;
+  font-size: 3vh;
+  position: relative;
+  padding-bottom: 1.5vh;
+}
+div.author div.text div.more a {
+  position: relative;
+  color: #fff;
+  padding: 1vh;
+  text-decoration: none;
+  border-radius: 1vh;
+  border: white 0.3vh groove;
+  background: rgb(27, 208, 221);
+}
+div.author div.text div.more a::after {
+  content: ">>";
+  color: rgb(27, 208, 221);
+  transform: translateX(3vh);
+  position: absolute;
+}
+@media screen and (max-width: 750px) {
+  div.author {
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url("authorBg720.jpg");
+  }
+  div.author div.text h2.heading2 span.helloWorld {
+    font-size: 15vw;
+  }
+  div.author div.text h2.heading2 span.iAmMaruf {
+    font-size: 5vw;
+  }
+  div.author div.text section.typing {
+    font-size: 5vw;
+  }
+  div.author div.text section.typing div.typeAnimation {
+    height: 8vw;
+  }
+  div.author div.text div.more {
+    font-size: 3vw;
+    padding-bottom: 1.5vw;
+  }
+  div.author div.text div.more a {
+    padding: 1vw;
+    border-radius: 1vw;
+    border: white 0.3vw groove;
+  }
+  div.author div.text div.more a::after {
+    transform: translateX(3vw);
+  }
+  div.author div.imageBox {
+    width: 100vw;
+    padding: 1vw 0;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  div.author div.imageBox section.container {
+    position: relative;
+    overflow: hidden;
+    width: 72vw;
+    height: 28vw;
+  }
+  div.author div.imageBox section.container div.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 28vw;
+    width: 88vw;
+    animation: none;
+  }
+  div.author div.imageBox section.container div.slider div.image {
+    position: relative;
+    height: 28vw;
+    width: 22vw;
+    margin: 1vw;
+    float: left;
+  }
 }
 @keyframes typeing {
   0%,
@@ -125,10 +224,32 @@ div.author div.text section.typing div ul.list li span::before {
     top: -400%;
   }
 }
-@media (max-width: 720px) {
-  div.author div.text section.typing div {
-    overflow: hidden;
-    height: 8vw;
-    transition: none;
+@keyframes imageSlide {
+  0% {
+    left: 0vh;
+  }
+  5% {
+    left: 0vh;
+  }
+  15% {
+    left: -40vh;
+  }
+  35% {
+    left: -40vh;
+  }
+  45% {
+    left: -80vh;
+  }
+  65% {
+    left: -80vh;
+  }
+  75% {
+    left: -120vh;
+  }
+  95% {
+    left: -120vh;
+  }
+  100% {
+    left: -120vh;
   }
 }
