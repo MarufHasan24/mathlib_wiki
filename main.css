@@ -1,9 +1,8 @@
 div.author {
-  margin: 0;
   padding: 0;
   color: #fff;
   font-family: "lato";
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
   height: auto;
   display: flex;
@@ -144,12 +143,61 @@ div.author div.text div.more a::after {
   transform: translateX(3vh);
   position: absolute;
 }
-@media screen and (max-width: 750px) {
+div.wiki {
+  height: auto;
+  width: 100%;
+  margin: 1% 0%;
+  padding: 1%;
+  background: rgb(255, 255, 255);
+}
+div.licence {
+  height: auto;
+  width: 100%;
+  margin: 1% 0%;
+  padding: 1%;
+  background: rgb(255, 255, 255);
+}
+div.contact {
+  height: auto;
+  width: 100%;
+  margin: 1% 0%;
+  padding: 1%;
+  background: rgb(255, 255, 255);
+}
+div.changeLog {
+  height: auto;
+  width: 100%;
+  margin: 1% 0%;
+  padding: 1%;
+  background: rgb(255, 255, 255);
+}
+div.uses {
+  height: auto;
+  width: 100%;
+  margin: 1% 0%;
+  padding: 1%;
+  background: rgb(255, 255, 255);
+}
+div.installation {
+  height: auto;
+  width: 100%;
+  margin: 1% 0%;
+  padding: 1%;
+  background: rgb(255, 255, 255);
+}
+div.description {
+  height: auto;
+  width: 100%;
+  margin: 1% 0%;
+  padding: 1%;
+  background: rgb(255, 255, 255);
+}
+@media screen and (max-width: 770px) {
   div.author {
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
-    background-image: url("authorBg720.jpg");
+    background-image: url("./authorBg720.jpg");
   }
   div.author div.text h2.heading2 span.helloWorld {
     font-size: 15vw;
