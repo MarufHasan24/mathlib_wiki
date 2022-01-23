@@ -108,17 +108,17 @@ div.author div.imageBox section.container div.slider div.image {
   float: left;
 }
 div.author div.imageBox section.container div.slider div.image.img1 {
-  background: url("kpc2021.jpg");
+  background: url("./kpc2021.jpg");
   background-position: center;
   background-size: cover;
 }
 div.author div.imageBox section.container div.slider div.image.img2 {
-  background: url("authorBg.jpg");
+  background: url("./authorBg.jpg");
   background-position: center;
   background-size: cover;
 }
 div.author div.imageBox section.container div.slider div.image.img3 {
-  background: url("MathlibLogo.jpg");
+  background: url("./MathlibLogo.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -197,7 +197,7 @@ div.description {
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
-    background-image: url("authorBg720.jpg");
+    background-image: url("./authorBg720.jpg");
   }
   div.author div.text h2.heading2 span.helloWorld {
     font-size: 15vw;
