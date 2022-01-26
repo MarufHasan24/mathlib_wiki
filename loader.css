@@ -282,19 +282,19 @@ span.logo {
 }
 @font-face {
   font-family: merri;
-  src: url("./fonts/Merriweather-Regular.ttf");
+  src: url("fonts/Merriweather-Regular.ttf");
 }
 @font-face {
-  font-family: "lato";
-  src: url("./fonts/lato.ttf");
+  font-family: lato;
+  src: url("fonts/lato.ttf");
 }
 @font-face {
   font-family: JetBrainsMono;
-  src: url("./fonts/JetBrainsMono.ttf");
+  src: url("fonts/JetBrainsMono.ttf");
 }
 @font-face {
-  font-family: "iconC";
-  src: url("./fonts/Icons-Color.ttf");
+  font-family: iconC;
+  src: url("fonts/Icons-Color.ttf");
 }
 @font-face {
   font-family: "icon";
