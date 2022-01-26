@@ -7,7 +7,6 @@
 
 //dependensis
 const nightMood = document.getElementById("nightMood");
-var switchNightModeAuto = true;
 
 // getting data from json file
 fetch("tableData.json")
