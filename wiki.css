@@ -20,13 +20,13 @@ p {
 .Day {
   height: 100vh;
   width: 100vw;
-  background: rgb(255, 255, 255);
+  background: linear-gradient(90deg, #3ae1ff 25%, #0e2d92 100%);
   color: rgb(29, 29, 29);
   margin: 1%;
   padding: 1%;
 }
 .Night {
-  background: rgb(29, 29, 29);
+  background: linear-gradient(90deg, #258da0 25%, #071649 100%);
   color: rgb(255, 250, 235);
   margin: 1%;
   padding: 1%;
@@ -54,17 +54,17 @@ ol {
 table {
   margin: 1%;
   width: auto;
-  background: #ddd;
+  background: #ddd8;
   color: #333;
   font-size: 22px;
   font-weight: 600;
 }
 .Night table {
-  background: #333;
+  background: #3335;
   color: #ddd;
 }
 table tr {
-  background: #ddd;
+  background: #ddd8;
   color: #333;
   display: flex;
   text-align: center;
@@ -74,7 +74,7 @@ table tr {
   border: 1px solid #fffa;
 }
 .Night table tr {
-  background: #333;
+  background: #3335;
   color: #ddd;
 }
 table tr[data-title="title"] th {
@@ -88,27 +88,27 @@ table tr[data-title="title"] th {
   font-weight: 600;
   font-family: "lato";
   border: 5px groove #ed6;
-  background: #ddd;
+  background: #ddd8;
 }
 table tr .title {
   height: 100%;
-  background: #ddd;
+  background: transparent;
   color: #333;
   width: 20%;
 }
 .Night .title {
-  background: #333;
+  background: transparent;
   color: #ddd;
 }
 table tr .input {
   height: 100%;
-  background: #ddd;
+  background: transparent;
   color: #333;
   width: 50%;
   text-align: left;
 }
 .Night .input {
-  background: #333;
+  background: transparent;
   color: #ddd;
 }
 table tr .input ul {
@@ -117,12 +117,12 @@ table tr .input ul {
 table tr .works {
   height: 100%;
   text-align: left;
-  background: #ddd;
+  background: transparent;
   color: #333;
   width: 30%;
 }
 .Night .works {
-  background: #333;
+  background: transparent;
   color: #ddd;
 }
 #nightMood {

@@ -60,7 +60,7 @@ div.author div.text section.typing span.still {
 }
 div.author div.text section.typing div.typeAnimation {
   overflow: hidden;
-  height: 8vh;
+  height: 8.1vh;
   transition: none;
 }
 div.author div.text section.typing div.typeAnimation ul.list {
@@ -179,7 +179,7 @@ div.author div.text div.more a::after {
     font-size: 5vw;
   }
   div.author div.text section.typing div.typeAnimation {
-    height: 8vw;
+    height: 8.1vw;
   }
   div.author div.text section.typing div.typeAnimation ul.list li span {
     padding-right: calc(1% + 1.1vw);
@@ -319,6 +319,43 @@ div.uses {
   background: linear-gradient(32deg, #f4d03faa 0%, #16a085aa 100%), #16a08577;
 }
 /* user ends */
+/* wiki starts */
+div.wiki {
+  background: linear-gradient(-90deg, #3ae1ffaa 25%, #0e2d92aa 100%);
+}
+div.wiki div.more {
+  color: #fff;
+  font-size: 3vh;
+  position: relative;
+  padding-bottom: 1.5vh;
+}
+div.wiki div.more a {
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  position: relative;
+  color: #fff;
+  padding: 1vh;
+  border-radius: 1vh;
+  text-decoration: none;
+  background: linear-gradient(90deg, #3ae1ff 25%, #0e2d92 100%);
+}
+div.wiki div.more a::after {
+  content: ">>";
+  color: inherit;
+  transform: translateX(2vh);
+  position: absolute;
+  transition: 0.3s;
+}
+div.wiki div.more a:hover::after {
+  transform: translateX(3.5vh);
+}
+/* wiki ends */
+/* troubleshoot starts */
+div.troubleshoot {
+  background: linear-gradient(90deg, #fad961aa 0%, #f76b1caa 100%);
+}
+/* troubleshoot ends */
 /* change log starts */
 div.changeLog {
   background: linear-gradient(135deg, #8bc6ecaa 0%, #565999aa 100%);
@@ -335,51 +372,66 @@ div.changeLog ul.primary ul.secondery li {
   font-weight: 450;
 }
 /* change log ends */
-/* wiki starts */
-div.wiki {
-  background: linear-gradient(-90deg, #3ae1ffaa 25%, #0e2d92aa 100%);
-}
-/* wiki ends */
-/* troubleshoot starts */
-div.troubleshoot {
-  background: linear-gradient(90deg, #fad961aa 0%, #f76b1caa 100%);
-}
-/* troubleshoot ends */
 /* contact starts */
 footer.contact[data-species="section"] {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  flex-direction: row;
   width: 100vw;
   margin: 1% 0 0 0;
   border-radius: 0;
   background: linear-gradient(19deg, #21d4fdaa 0%, #b721ffaa 100%);
 }
-footer.contact[data-species="section"] div.contacts {
+footer.contact[data-species="section"] div ul {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  text-align: right;
-  border-right: ivory solid 3px;
-  padding: 0 10% 0 0;
-}
-footer.contact[data-species="section"] div.keywords {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
   text-align: left;
-  width: max-content;
-  padding: 0 0 0 10%;
+  justify-content: left;
+  flex-direction: column;
+  flex-wrap: wrap;
+  list-style: none;
 }
-footer.contact[data-species="section"] div.contacts h4,
-footer.contact[data-species="section"] div.keywords h4 {
-  text-align: center;
-  width: 50%;
+footer.contact[data-species="section"] div ul li {
+  font-size: 20px;
 }
-footer.contact[data-species="section"] div.contacts a {
+footer.contact[data-species="section"] div ul li a {
+  font-size: 20px;
+  text-decoration: none;
   color: inherit;
   font-weight: 500;
-  text-decoration: none;
-  font-size: 18px;
+}
+footer.contact[data-species="section"] div ul li a:hover {
+  font-size: 22px;
+}
+footer.contact[data-species="section"] div ul li:hover {
+  font-size: 22px;
 }
 /* contact */
+
+.btn-grad {
+  background-image: linear-gradient(
+    to right,
+    #003973 0%,
+    #e5e5be 51%,
+    #003973 100%
+  );
+}
+.btn-grad {
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
