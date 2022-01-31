@@ -1,9 +1,0 @@
-"":{
-  "title" : "",
-    "input":{
-      "data":[]
-    },"work":{
-      "Mwork" : "",
-      "work": ""
-    } 
-  }
