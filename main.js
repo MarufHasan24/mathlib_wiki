@@ -11,8 +11,14 @@ for (let i = 0; i < a.length; i++) {
 for (let i = 0; i < code.length; i++) {
   codeData[i] = code[i].innerHTML;
   code[i].onclick = function () {
-    navigator.clipboard.writeText(codeData[i]);
-    alert(`copied successfully! copied text is "${codeData[i]}"`);
+    navigator.clipboard.writeText(codeData[i]).then(
+      function () {
+        alert(`copied successfully! copied text is "${codeData[i]}"`);
+      },
+      function () {
+        alert(`can't copy. Please copy it manually. Thanks`);
+      }
+    );
   };
 }
 
