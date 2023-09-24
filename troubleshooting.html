@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet">
+    <title>
+        troubleshooting mathlib-n
+    </title>
+</head>
+
+<body>
+    <div id="sidebar" class="hide">
+        <a href="javascript:void(0)" id="navbtn">&#9776;</a>
+        <ul class="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="author.html">Author</a></li>
+            <li><a href="wiki.html">Wiki</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="more.html">More</a></li>
+            <li><a href="vector.html">Vector</a></li>
+            <li><a href="matrix.html">Matrix</a></li>
+            <li><a class="self" href="troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+    </div>
+    <header>
+        <h1>Mathlib-n troubleshooting</h1>
+    </header>
+    <section>
+        <h3>Problem: old version installing</h3>
+        <div class="solution">
+            <h4>Solution</h4>
+            <p>
+                If you are installing the library using npm, then you can use version with command. Like:
+                <code> npm i mathlib@4.0.0</code> to install the
+                4.0.0 version. Nor you can download the latest version from the <a href="
+                https://github.com/MarufHasan24/mathlib.git">GitHub repository</a>.
+                run <code>git clone https://github.com/MarufHasan24/mathlib.git</code> to download the latest beta
+                version.
+            </p>
+        </div>
+        <h3>Problem: not working</h3>
+        <div class="solution">
+            <h4>Solution</h4>
+            <p>
+                If you are using the library in your project, then you have to import it using <code>require()</code>
+                function. Like: <code>const mathlib = require('mathlib-n')</code>.
+                Then you can use any function or constant of the library by using <code>mathlib.functionName()</code> or
+                <code>mathlib.constantName</code>
+                like: <code>mathlib.add(2, 3)</code> or <code>mathlib.PI</code>.
+                <em>If you getting any unexpected error:</em>
+                You can report it in the <a href="https://github.com/MarufHasan24/mathlib/issues">issues</a> section of
+                the GitHub repository.
+            </p>
+        </div>
+        <h3>Problem: memory distroyed</h3>
+        <div class="solution">
+            <h4>Solution</h4>
+            run below command in your terminal:
+            <code>npm run fix-memo --prefix /PATH TO node_modules/node_modules/mathlib-n</code>
+            Don't use sync loop with async memo functions.
+        </div>
+        <h3>Problem: can't change calculation mode</h3>
+        <div class="solution">
+            <h4>Solution</h4>
+            there are three calculation mode in mathlib-n. They are:
+            <ul>
+                <li>normal</li>
+                <li>science</li>
+                <li>fixed</li>
+            </ul>
+            You can change calculation mode by using <code>mathlib.setmode([mode],[status])</code> function. Like:
+            <code>mathlib.setmode('science',8)</code>. details are in the <a href="more.html">More</a> page.
+            you also can change it using terminal. run below command in your terminal:
+            <code>npm run mode --prefix /PATH TO node_modules/node_modules/mathlib-n</code> then follow the
+            instructions.
+        </div>
+    </section>
+    <footer>
+        Mathlib-n &copy; 2023 Maruf Hasan
+    </footer>
+</body>
+<script src="./common.js"></script>
+
+</html>

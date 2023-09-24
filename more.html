@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathlib-n More..</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="hl.css" />
+</head>
+
+<body>
+    <div id="sidebar" class="hide">
+        <a href="javascript:void(0)" id="navbtn">&#9776;</a>
+        <ul class="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="author.html">Author</a></li>
+            <li><a href="wiki.html">Wiki</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a class="self" href="more.html">More</a></li>
+            <li><a href="vector.html">Vector</a></li>
+            <li><a href="matrix.html">Matrix</a></li>
+            <li><a href="troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+    </div>
+    <header>
+        <h1>Mathlib-n More..</h1>
+    </header>
+    <section>
+        <h2>Overview</h2>
+        <h3>mathlib</h3>
+        <p>
+            mathlib() is a function that can be used to get status. It will run an animation in your terminal. It's not
+            for any mathematical purpose. It's an ester egg of mathlib function. Just wait a while and after a few
+            seconds you will be able to know the <imp>mode, status, record (how many calculation data do you have),
+                trush
+                (how many calculation data is in trush folder.)</imp> and <imp>restored(how many file are restored from
+                trush.) etc</imp>.
+            At the very first mode should be <b>normal</b>, status <b>null</b>, record,trush and restored should be 0;
+        </p>
+        <h3>setmode</h3>
+        <p>
+            setmode is a function that can be used to set mode. It will set the mode of calculation. There are three
+            modes avilable in mathlib-n. They are <b>normal</b>, <b>scientific</b> and <b>fixed</b>. And status range is
+            1-14. You can set mode by
+            using <code>setmode(mode,status)</code>. like :
+        <pre class="code"><code class="language-javascript">    const mathlib = require('mathlib-n');
+    mathlib.setmode('sci', 5); // set mode to scientific and status to 5</code></pre>
+        or to set mode to fixed :
+        <pre class="code"><code class="language-javascript">    const mathlib = require('mathlib-n');
+    mathlib.setmode('fix', 5); // set mode to fixed and status to 5</code></pre>
+        </p>
+        <p>or you can use <code>setmode()</code> to set mode to normal and status to null.</p>
+        <h3>getmode</h3>
+        <p>
+            getmode is a function that is used to get current mode. It will return the mode of calculation. There are
+            three
+            modes avilable in mathlib-n. They are <b>normal</b>, <b>scientific</b> and <b>fixed</b>. You can get mode by
+            using <code>getmode()</code>. like :
+        <pre class="code"><code class="language-javascript">    const mathlib = require('mathlib-n');
+    mathlib.getmode(); // return current mode</code></pre>
+        if mode if fixed and status is 7 then output should be:
+        <pre>
+    {
+        mode: 'fixed',
+        status: 7
+    }
+</pre>
+        </p>
+    </section>
+    <footer>
+        Mathlib-n &copy; 2023 Maruf Hasan
+    </footer>
+</body>
+<script src="hl.js"></script>
+<script>hljs.highlightAll();
+    //add line numbers
+    setTimeout(function () {
+        document.querySelectorAll('pre code.language-javascript').forEach((block) => {
+            let lines = block.innerHTML.split(/\n/);
+            lines.forEach((line, index) => {
+                lines[index] = `<span class="index">${(index + 1)}</span>${line}`;
+            });
+            block.innerHTML = lines.join('\n');
+        });
+    }, 100);
+    //add a copy button to code blocks
+    setTimeout(function () {
+        document.querySelectorAll('pre.code').forEach((block) => {
+            copyBtn(block)
+        });
+    }, 100)
+</script>
+<script src="./common.js"></script>
+
+</html>

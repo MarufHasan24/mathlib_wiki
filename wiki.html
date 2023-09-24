@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet">
+    <title>
+        wiki mathlib-n
+    </title>
+</head>
+
+<body>
+    <div id="sidebar" class="hide">
+        <a href="javascript:void(0)" id="navbtn">&#9776;</a>
+        <ul class="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="author.html">Author</a></li>
+            <li><a class="self" href="wiki.html">Wiki</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="more.html">More</a></li>
+            <li><a href="vector.html">Vector</a></li>
+            <li><a href="matrix.html">Matrix</a></li>
+            <li><a href="troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+    </div>
+    <header>
+        <h1>Mathlib-n wiki</h1>
+    </header>
+    <section>
+        <h2>Overview</h2>
+        <p>
+            Mathlib-n is an open source math library for nodejs. It is a collection of functions and constants that
+            are usually used in math. It is a free and open source project. It can solve about all math problems used in
+            daily life.
+        </p>
+        <h2>Installation</h2>
+        <h3>npm or yarn</h3>
+        <p>
+            You can install mathlib-n using npm or yarn. To install mathlib-n using npm, run the following command: <br>
+            <code>npm install mathlib-n</code> <br> To install mathlib-n using yarn, run the following command: <br>
+            <code>yarn add mathlib-n</code>
+        </p>
+        <h3>Github</h3>
+        <p>
+            You can also install mathlib-n using github. To install mathlib-n using github, run the following command:
+            <br><code>git clone https://github.com/MarufHasan24/mathlib.git</code>
+        </p>
+        <h3>API</h3>
+        <p>
+            You can also install mathlib-n using API. To install mathlib-n using API, run the following command: <br>
+            <code>let math = require("https://cdn.jsdelivr.net/npm/mathlib-n")</code>
+        </p>
+        <h2>Usage</h2>
+        <p>
+            After installing the library, you can import it into your project using the <code>require()</code> function:
+            <code>const mathlib = require('mathlib-n')</code>
+            then you can use any function or constant of the library by using <code>mathlib.functionName()</code> or
+            <code>mathlib.constantName</code>
+            like: <code>mathlib.add(2, 3)</code> or <code>mathlib.PI</code>
+        </p>
+        <h2>Content table</h2>
+        <div class="main">
+            <div class="category">
+                <h2>Functions</h2>
+                <p>
+                    Mathlib has a lot of functions. Here are all of them:
+                </p>
+                <a href="functions.html">know more</a>
+            </div>
+            <div class="category">
+                <h2>Constants</h2>
+                <p>
+                    Mathlib has a lot of constants. Here are all of them:
+                </p>
+                <a href="constants.html">know more</a>
+            </div>
+            <div class="category">
+                <h2>Vector</h2>
+                <p>Explore Vector contructor and use cases.
+                </p>
+                <a href="vector.html">Learn More</a>
+            </div>
+            <div class="category">
+                <h2>Matrix</h2>
+                <p>Explore Matrix functions and use cases to see how the library can be used </p>
+                <a href="matrix.html">Learn More</a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        Mathlib-n &copy; 2023 Maruf Hasan
+    </footer>
+</body>
+<script src="./common.js"></script>
+
+</html>
