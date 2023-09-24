@@ -21,7 +21,7 @@ section {
     width: 75vw;
     margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #ffffffbb;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: 0.6s;
 }
@@ -245,4 +245,24 @@ pre {
     background-color: #f0f0f0;
     padding: 10px;
     white-space: pre-wrap;
+}
+div#bg {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    z-index: -1;
+}
+div#bg span {
+    height: 30px;
+    width: calc(10vw - 4px);
+    background-color: #ffffff;
+    position: static;
+    display: inline-block;
+    margin: 60px 60px;
+    text-align: center;
+    opacity: 0.15;
 }
