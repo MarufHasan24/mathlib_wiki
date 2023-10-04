@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!--Code created by Maruf hasan-->
+<!--Date: 04 October, 2023-->
+<html>
+<meta name="author" content="Maruf hasan" />
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+<head>
+    <title>MAthlib-cpp: bainary</title>
+    <link rel="stylesheet" href="./../style.css" />
+    <style>
+        button.cpy-btn {
+            background-color: #333;
+            color: #fff;
+            padding: 5px;
+            text-decoration: none;
+            border: none;
+            float: right;
+            transition: 0.3s;
+        }
+    
+        button.cpy-btn:hover {
+            background-color: #fff;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="bg"><span class="math">mathlib</span><span class="math">mathcpp</span><span
+            class="math">mathlib-cpp</span><span class="math">math library</span><span class="math">mathlib</span><span
+            class="math">math</span><span class="math">math</span><span class="math">matametics</span><span
+            class="math">mathlib</span><span class="math">cpp</span><span class="math">mathcpp</span><span
+            class="math">mathlib-cpp</span><span class="math">mathcpp</span><span class="math">math</span><span
+            class="math">mathlibcpp</span><span class="math">mathcpp</span><span class="math">math</span><span
+            class="math">cpp</span><span class="math">mathlib-cpp</span><span class="math">math library</span><span
+            class="math">mathlibcpp</span><span class="math">mathlibcpp</span><span class="math">mathlib-cpp</span><span
+            class="math">math</span><span class="math">math library</span><span class="math">math library</span><span
+            class="math">mathlibcpp</span><span class="math">mathlib-cpp</span><span class="math">mathlib-cpp</span><span
+            class="math">math library</span></div>
+    <div id="sidebar" class="hide">
+        <a href="javascript:void(0)" id="navbtn">&#9776;</a>
+        <ul class="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="./../author.html">Author</a></li>
+            <li><a href="wiki.html">Wiki</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a class="self" href="bainary.html">Bainary</a></li>
+            <li><a href="hexadecimal.html">Hexadecimal</a></li>
+        </ul>
+    </div>
+    <header>
+        <h1>Mathlib-cpp: Bainary</h1>
+    </header>
+    <section>
+        <h1 id="binary-operations">Binary Operations</h1>
+        <p><strong>Written by: <a href="https://github.com/raaz252">Raj Ojha</a> and <a
+                    href="https://github.com/MarufHasan24">Maruf hasan</a></strong></p>
+        <p>This C++ file provides various functions for performing binary calculations. This file use following header files:
+        </p>
+        <ul>
+            <li><code>cmath</code></li>
+            <li><code>string</code></li>
+            <li><code>bitset</code></li>
+            <li><code>sstream</code></li>
+        </ul>
+        <p>all are standard C++ header files. This export all functions in <code>mlb</code> namespace.</p>
+        <h2 id="functions">Functions</h2>
+        <h3 id="input-binary-as-string">input binary as string</h3>
+        <h4 id="stdstring-decimaltobinaryint-decimalnumber"><code>std::string decimalToBinary(int decimalNumber)</code></h4>
+        <p>This function converts a decimal number to its binary representation and returns it as a string.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code"><code class="language-javascript">int decimalNumber = 42;
+std::string binary = mlb::decimalToBinary(decimalNumber);</code></pre>
+        <h4 id="int-binarytodecimalstdstring-binary"><code>int binaryToDecimal(std::string&amp; binary)</code></h4>
+        <p>This function converts a binary string to its decimal representation and returns it as an integer.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code"><code class="language-javascript">std.::string binary = &quot;1010&quot;;
+int decimalNumber = mlb::binaryToDecimal(binary);</code></pre>
+        <h4 id="stdstring-binaryaddstdstring-binary1-stdstring-binary2">
+            <code>std::string binaryAdd(std::string&amp; binary1, std::string&amp; binary2)</code></h4>
+        <p>This function performs binary addition of two binary strings and returns the result as a binary string.
+            <strong>Example:</strong>
+        </p>
+        <pre class="code"><code class="language-javascript">std::string binary1 = &quot;1010&quot;;
+std::string binary2 = &quot;1101&quot;;
+std::string result = mlb::binaryAdd(binary1, binary2);</code></pre>
+        <h4 id="stdstring-binarysubstdstring-binary1-stdstring-binary2">
+            <code>std::string binarySub(std::string&amp; binary1, std::string&amp; binary2)</code></h4>
+        <p>This function performs binary subtraction (binary1 - binary2) of two binary strings and returns the result as a
+            binary string.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code"><code class="language-javascript">std::string binary1 = &quot;1010&quot;;
+std::string binary2 = &quot;1101&quot;;
+std::string result = mlb::binarySub(binary1, binary2);</code></pre>
+        <h4 id="stdstring-binarymulstdstring-binary1-stdstring-binary2">
+            <code>std::string binaryMul(std::string&amp; binary1, std::string&amp; binary2)</code></h4>
+        <p>This function performs binary multiplication of two binary strings and returns the result as a binary string.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code"><code class="language-javascript">std::string binary1 = &quot;1010&quot;;
+std::string binary2 = &quot;1101&quot;;
+std::string result = mlb::binaryMul(binary1, binary2);</code></pre>
+        <h4 id="stdstring-binarydivconst-stdstring-binary1-const-stdstring-binary2">
+            <code>std::string binaryDiv(const std::string&amp; binary1, const std::string&amp; binary2)</code></h4>
+        <p>This function performs binary division (integer division, returns quotient) of two binary strings and returns the
+            result as a binary string.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code"><code class="language-javascript">std::string binary1 = &quot;1010&quot;;
+std::string binary2 = &quot;1101&quot;;
+std::string result = mlb::binaryDiv(binary1, binary2);</code></pre>
+        <h3 id="input-binary-as-int">input binary as int</h3>
+        <h4 id="stdstring-binaryaddint-num1-int-num2"><code>std::string binaryAdd(int num1, int num2)</code></h4>
+        <p>This function performs binary addition of two decimal numbers and returns the result as a binary string. It
+            internally uses decimalToBinary and binaryAdd functions.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code"><code class="language-javascript">int num1 = 42;
+int num2 = 13;
+std::string result = mlb::binaryAdd(num1, num2);</code></pre>
+        <h4 id="stdstring-binarysubint-num1-int-num2"><code>std::string binarySub(int num1, int num2)</code></h4>
+        <p>This function performs binary subtraction (num1 - num2) of two decimal numbers and returns the result as a binary
+            string. It internally uses decimalToBinary and binarySub functions.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code"><code class="language-javascript">int num1 = 42;
+int num2 = 13;
+std::string result = mlb::binarySub(num1, num2);</code></pre>
+        <h4 id="stdstring-binarymulint-num1-int-num2"><code>std::string binaryMul(int num1, int num2)</code></h4>
+        <p>This function performs binary multiplication of two decimal numbers and returns the result as a binary string. It
+            internally uses decimalToBinary and binaryMul functions.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code"><code class="language-javascript">int num1 = 6;
+int num2 = 5;
+std::string result = mlb::binaryMul(num1, num2);</code></pre>
+        <h4 id="stdstring-binarydivint-num1-int-num2"><code>std::string binaryDiv(int num1, int num2)</code></h4>
+        <p>This function performs binary division (integer division, returns quotient) of two decimal numbers and returns the
+            result as a binary string. It internally uses decimalToBinary and binaryDiv functions.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code"><code class="language-javascript">int num1 = 36;
+int num2 = 6;
+std::string result = mlb::binaryDiv(num1, num2);</code></pre>
+    </section>
+    <footer>
+        Mathlib-cpp &copy; 2023 Maruf Hasan
+    </footer>
+</body>
+
+<script src="./../common.js"></script>
+<link rel="stylesheet" href="./../hl.css">
+<script src="./../iconmaker.js"></script>
+<script src="./../hl.js"></script>
+<script>hljs.highlightAll();
+    //add line numbers
+    setTimeout(function () {
+        document.querySelectorAll('pre code.language-javascript').forEach((block) => {
+            let lines = block.innerHTML.split(/\n/);
+            lines.forEach((line, index) => {
+                lines[index] = `<span class="index">${index + 1}</span>${line}`;
+            });
+            block.innerHTML = lines.join('\n');
+        });
+    }, 100);
+    //add a copy button to code blocks
+    setTimeout(function () {
+        document.querySelectorAll('pre.code').forEach((block) => {
+            copyBtn(block)
+        });
+    }, 100);
+</script>
+</html>

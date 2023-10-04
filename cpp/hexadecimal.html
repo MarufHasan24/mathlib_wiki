@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!--Code created by Maruf hasan-->
+<!--Date: 04 October, 2023-->
+<html>
+<meta name="author" content="Maruf hasan" />
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+<head>
+    <title>Mathlib-cpp: hexadecimal</title>
+    <link rel="stylesheet" href="./../style.css" />
+    <style>
+        button.cpy-btn {
+            background-color: #ffffff;
+            color: #2e2e2e;
+            padding: 5px;
+            text-decoration: none;
+            float: right;
+            border: none;
+            transition: 0.3s;
+        }
+    
+        button.cpy-btn:hover {
+            background-color: #2e2e2e;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<link rel="stylesheet" href="./../hl.css">
+<body>
+    <div id="bg"><span class="math">mathlib</span><span class="math">mathcpp</span><span class="math">mathlib-cpp</span><span
+            class="math">math library</span><span class="math">mathlib</span><span class="math">math</span><span
+            class="math">math</span><span class="math">matametics</span><span class="math">mathlib</span><span
+            class="math">cpp</span><span class="math">mathcpp</span><span class="math">mathlib-cpp</span><span
+            class="math">mathcpp</span><span class="math">math</span><span class="math">mathlibcpp</span><span
+            class="math">mathcpp</span><span class="math">math</span><span class="math">cpp</span><span
+            class="math">mathlib-cpp</span><span class="math">math library</span><span class="math">mathlibcpp</span><span
+            class="math">mathlibcpp</span><span class="math">mathlib-cpp</span><span class="math">math</span><span
+            class="math">math library</span><span class="math">math library</span><span class="math">mathlibcpp</span><span
+            class="math">mathlib-cpp</span><span class="math">mathlib-cpp</span><span class="math">math library</span></div>
+    <div id="sidebar" class="hide">
+        <a href="javascript:void(0)" id="navbtn">&#9776;</a>
+        <ul class="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="./../author.html">Author</a></li>
+            <li><a href="wiki.html">Wiki</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="bainary.html">Bainary</a></li>
+            <li><a class="self" href="hexadecimal.html">Hexadecimal</a></li>
+        </ul>
+    </div>
+    <header>
+        <h1>Mathlib-cpp : Hexadecimal</h1>
+    </header>
+    <section>
+        <h1>Hexadecimal Operations</h1>
+        <p><strong>Written by: <a href="https://github.com/Mostaxd">Mostafa Ahmed</a></strong></p>
+        <p>This C++ file provides various functions for performing hexadecimal calculations. This file uses the following
+            standard C++ header files:</p>
+        <ul>
+            <li><code>iostream</code></li>
+            <li><code>sstream</code></li>
+            <li><code>string</code></li>
+            <li><code>stdexcept</code></li>
+        </ul>
+        <p>All functions are exported in the <code>mlb</code> namespace.</p>
+        <h2>Functions</h2>
+        <h3>Input hexadecimal as string</h3>
+        <h4><code>std::string decimalToHex(int decimalNumber)</code></h4>
+        <p>Converts a decimal number to its hexadecimal representation.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code"><code class="language-javascript">int decimalNumber = 42;
+std::string hexValue = mlb::decimalToHex(decimalNumber);</code></pre>
+        <h4><code>int hexToDecimal(const std::string&amp; hexStr)</code></h4>
+        <p>Converts a hexadecimal string to its decimal representation.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code"><code class="language-javascript">std::string hexStr = &quot;2A&quot;;
+int decimalNumber = mlb::hexToDecimal(hexStr);</code></pre>
+        <h4>
+            <code>std::string hexAdd(const std::string&amp; hex1, const std::string&amp; hex2)</code></h4>
+        <p>Performs the addition of two hexadecimal strings.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code"><code class="language-javascript">std::string hex1 = &quot;2A&quot;;
+std::string hex2 = &quot;1B&quot;;
+std::string result = mlb::hexAdd(hex1, hex2);</code></pre>
+        <h4>
+            <code>std::string hexSub(const std::string&amp; hex1, const std::string&amp; hex2)</code></h4>
+        <p>Performs the subtraction (hex1 - hex2) of two hexadecimal strings.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code"><code class="language-javascript">std::string hex1 = &quot;2A&quot;;
+std::string hex2 = &quot;1B&quot;;
+std::string result = mlb::hexSub(hex1, hex2);</code></pre>
+        <h4>
+            <code>std::string hexMul(const std::string&amp; hex1, const std::string&amp; hex2)</code></h4>
+        <p>Performs the multiplication of two hexadecimal strings.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code"><code class="language-javascript">std::string hex1 = &quot;2&quot;;
+std::string hex2 = &quot;A&quot;;
+std::string result = mlb::hexMul(hex1, hex2);</code></pre>
+        <h4>
+            <code>std::string hexDiv(const std::string&amp; hex1, const std::string&amp; hex2)</code></h4>
+        <p>Performs the division of two hexadecimal strings.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code"><code class="language-javascript">std::string hex1 = &quot;2A&quot;;
+std::string hex2 = &quot;2&quot;;
+std::string result = mlb::hexDiv(hex1, hex2);</code></pre>
+        <h3>Input hexadecimal as int</h3>
+        <h4><code>std::string hexAdd(int num1, int num2)</code></h4>
+        <p>Performs the addition of two decimal numbers and returns the result as a hexadecimal string.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code"><code class="language-javascript">int num1 = 42;
+int num2 = 27;
+std::string result = mlb::hexAdd(num1, num2);</code></pre>
+        <h4><code>std::string hexSub(int num1, int num2)</code></h4>
+        <p>Performs the subtraction (num1 - num2) of two decimal numbers and returns the result as a hexadecimal string.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code"><code class="language-javascript">int num1 = 42;
+int num2 = 27;
+std::string result = mlb::hexSub(num1, num2);</code></pre>
+        <h4><code>std::string hexMul(int num1, int num2)</code></h4>
+        <p>Performs the multiplication of two decimal numbers and returns the result as a hexadecimal string.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code"><code class="language-javascript">int num1 = 6;
+int num2 = 5;
+std::string result = mlb::hexMul(num1, num2);</code></pre>
+        <h4><code>std::string hexDiv(int num1, int num2)</code></h4>
+        <p>Performs the division of two decimal numbers and returns the result as a hexadecimal string.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code"><code class="language-javascript">int num1 = 36;
+int num2 = 6;
+std::string result = mlb::hexDiv(num1, num2);</code></pre>
+    </section>
+    <footer>
+        Mathlib-cpp &copy; 2023 Maruf Hasan
+    </footer>
+</body>
+<script src="./../hl.js"></script>
+<script src="./../iconmaker.js"></script>
+<script>hljs.highlightAll();
+    //add line numbers
+    setTimeout(function () {
+        document.querySelectorAll('pre code.language-javascript').forEach((block) => {
+            let lines = block.innerHTML.split(/\n/);
+            lines.forEach((line, index) => {
+                lines[index] = `<span class="index">${(index + 1)}</span>${line}`;
+            });
+            block.innerHTML = lines.join('\n');
+        });
+    }, 100);
+    //add a copy button to code blocks
+    setTimeout(function () {
+        document.querySelectorAll('pre.code').forEach((block) => {
+            copyBtn(block)
+        });
+    }, 100)
+</script>
+<script src="./../common.js"></script>
+</html>
