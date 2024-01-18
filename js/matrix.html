@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Matrix Constructor Documentation</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        button.cpy-btn {
+            background-color: #333;
+            color: #fff;
+            padding: 5px;
+            text-decoration: none;
+            border: none;
+            float: right;
+            transition: 0.3s;
+        }
+
+        button.cpy-btn:hover {
+            background-color: #fff;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="bg"><span class="math">math library</span><span class="math">mathlib</span><span class="math">math</span><span class="math">mathjs</span><span class="math">mathlib-n</span><span class="math">matametics</span><span class="math">math</span><span class="math">mathlib</span><span class="math">mathlib-n</span><span class="math">math</span><span class="math">math library</span><span class="math">matametics</span><span class="math">mathlib-n</span><span class="math">math library</span><span class="math">mathjs</span><span class="math">math</span><span class="math">nodejs</span><span class="math">math</span><span class="math">math</span><span class="math">math</span><span class="math">mathlibjs</span><span class="math">mathlib-n</span><span class="math">math library</span><span class="math">mathlibjs</span><span class="math">mathlib-n</span><span class="math">math</span><span class="math">math</span><span class="math">mathlib-n</span><span class="math">mathlib-n</span><span class="math">math library</span></div>
+    <div id="sidebar" class="hide">
+        <a href="javascript:void(0)" id="navbtn">&#9776;</a>
+        <ul class="list">
+            <li><a href="../index.html">Mathlib</a></li>
+<li><a href="index.html">Home</a></li>
+            <li><a href="./../author.html">Author</a></li>
+            <li><a href="wiki.html">Wiki</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="more.html">More</a></li>
+            <li><a href="vector.html">Vector</a></li>
+            <li><a class="self" href="matrix.html">Matrix</a></li>
+            <li><a href="troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+    </div>
+    <header>
+        <h1>Matrix Constructor</h1>
+    </header>
+    <section>
+        <p>
+            The Matrix constructor creates a new matrix object that can be used to perform common matrix operations.
+            It can be initialized with a 2D array of numbers or with individual values for a specific size.
+        </p>
+        <h2>Creating a Matrix Object</h2>
+        <p>
+            To create a new matrix object, use the following syntax:
+        </p>
+        <pre class="code"><code class="language-javascript">const { Matrix } = require('mathlib-n');
+const matrix = new Matrix([
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
+]);</code></pre>
+        <p>
+            This creates a 3x3 matrix with the values:
+        </p>
+        <pre>| 1 2 3 |
+| 4 5 6 |
+| 7 8 9 |</pre>
+        <p>
+            Alternatively, you can create a new matrix with specific dimensions using the following syntax:
+        </p>
+        <pre class="code"><code class="language-javascript">const matrix = new Matrix(3, 4);</code></pre>
+        <p>
+            This creates a new 3x4 matrix with all values initialized to zero.
+        </p>
+        <pre>| 0 0 0 |
+| 0 0 0 |
+| 0 0 0 |</pre>
+        <h2>Matrix Operations</h2>
+
+        <h1>JavaScript Matrix Functions Documentation</h1>
+
+        <h2>1. Matrix Object</h2>
+        <p>The following functions are available for manipulating matrix objects:</p>
+
+        <h3><code>det</code></h3>
+        <p>Calculate the determinant of the matrix.</p>
+        <pre class="code"><code class="language-javascript">const determinant = matrix.det();</code></pre>
+
+        <h3><code>inv</code></h3>
+        <p>Calculate the inverse of the matrix.</p>
+        <pre class="code"><code class="language-javascript">const inverse = matrix.inv();</code></pre>
+
+        <h3><code>add</code></h3>
+        <p>Add two matrices together and return the result.</p>
+        <pre class="code"><code class="language-javascript">const result = matrix1.add(matrix2);</code></pre>
+
+        <h3><code>sub</code></h3>
+        <p>Subtract one matrix from another and return the result.</p>
+        <pre class="code"><code class="language-javascript">const result = matrix1.sub(matrix2);</code></pre>
+
+        <h3><code>div</code></h3>
+        <p>Divide the matrix by a scalar value.</p>
+        <pre class="code"><code class="language-javascript">const result = matrix.div(scalar);</code></pre>
+
+        <h3><code>mul</code></h3>
+        <p>Multiply two matrices together and return the result.</p>
+        <pre class="code"><code class="language-javascript">const result = matrix1.mul(matrix2);</code></pre>
+
+        <h3><code>trnsp</code></h3>
+        <p>Transpose the matrix (swap rows with columns).</p>
+        <pre class="code"><code class="language-javascript">const transposed = matrix.trnsp();</code></pre>
+
+        <h3><code>isSquare</code></h3>
+        <p>Check if the matrix is square (equal number of rows and columns).</p>
+        <pre class="code"><code class="language-javascript">const isSquareMatrix = matrix.isSquare();</code></pre>
+
+        <h3><code>isSymmetric</code></h3>
+        <p>Check if the matrix is symmetric.</p>
+        <pre class="code"><code class="language-javascript">const isSymmetricMatrix = matrix.isSymmetric();</code></pre>
+
+        <h3><code>isSkewSymmetric</code></h3>
+        <p>Check if the matrix is skew-symmetric.</p>
+        <pre
+            class="code"><code class="language-javascript">const isSkewSymmetricMatrix = matrix.isSkewSymmetric();</code></pre>
+
+        <h3><code>isIdentity</code></h3>
+        <p>Check if the matrix is an identity matrix.</p>
+        <pre class="code"><code class="language-javascript">const isIdentityMatrix = matrix.isIdentity();</code></pre>
+
+        <h3><code>isUpperTriangular</code></h3>
+        <p>Check if the matrix is upper triangular.</p>
+        <pre
+            class="code"><code class="language-javascript">const isUpperTriangularMatrix = matrix.isUpperTriangular();</code></pre>
+
+        <h3><code>isLowerTriangular</code></h3>
+        <p>Check if the matrix is lower triangular.</p>
+        <pre
+            class="code"><code class="language-javascript">const isLowerTriangularMatrix = matrix.isLowerTriangular();</code></pre>
+
+        <h3><code>isDiagonal</code></h3>
+        <p>Check if the matrix is diagonal.</p>
+        <pre class="code"><code class="language-javascript">const isDiagonalMatrix = matrix.isDiagonal();</code></pre>
+
+        <h3><code>isOrthogonal</code></h3>
+        <p>Check if the matrix is orthogonal.</p>
+        <pre
+            class="code"><code class="language-javascript">const isOrthogonalMatrix = matrix.isOrthogonal();</code></pre>
+
+        <h3><code>isUnitary</code></h3>
+        <p>Check if the matrix is unitary.</p>
+        <pre class="code"><code class="language-javascript">const isUnitaryMatrix = matrix.isUnitary();</code></pre>
+
+        <h3><code>isZero</code></h3>
+        <p>Check if the matrix is a zero matrix (all elements are zero).</p>
+        <pre class="code"><code class="language-javascript">const isZeroMatrix = matrix.isZero();</code></pre>
+
+        <h3><code>isScalar</code></h3>
+        <p>Check if the matrix is a scalar matrix (diagonal with equal elements).</p>
+        <pre class="code"><code class="language-javascript">const isScalarMatrix = matrix.isScalar();</code></pre>
+
+        <h3><code>isRowEchelon</code></h3>
+        <p>Check if the matrix is in row-echelon form.</p>
+        <pre
+            class="code"><code class="language-javascript">const isRowEchelonMatrix = matrix.isRowEchelon();</code></pre>
+
+        <h3><code>rank</code></h3>
+        <p>Calculate the rank of the matrix.</p>
+        <pre class="code"><code class="language-javascript">const rank = matrix.rank();</code></pre>
+
+        <h3><code>adjoint</code></h3>
+        <p>Calculate the adjoint (adjugate) of the matrix.</p>
+        <pre class="code"><code class="language-javascript">const adjointMatrix = matrix.adjoint();</code></pre>
+
+        <h3><code>magicSquare</code></h3>
+        <p>Generate a magic square or return false.</p>
+        <pre class="code"><code class="language-javascript">const magicSquare = Matrix.magicSquare(size);</code></pre>
+
+        <h3><code>trace</code></h3>
+        <p>Calculate the trace (sum of diagonal elements) of the matrix.</p>
+        <pre class="code"><code class="language-javascript">const traceValue = matrix.trace();</code></pre>
+
+        <h2> Example Usage</h2>
+        <pre class="code"><code class="language-javascript">// Create matrices
+    const matrix1 = new Matrix([[1, 2], [3, 4]]);
+    const matrix2 = new Matrix([[5, 6], [7, 8]]);
+    const scalar = 2;
+
+    // Perform matrix operations
+    const determinant = matrix1.det();
+    const inverse = matrix1.inv();
+    const sum = matrix1.add(matrix2);
+    const difference = matrix1.sub(matrix2);
+    const divided = matrix1.div(scalar);
+    const product = matrix1.mul(matrix2);
+    const transposed = matrix1.trnsp();
+    const isSquareMatrix = matrix1.isSquare();
+    const isSymmetricMatrix = matrix1.isSymmetric();
+    const isSkewSymmetricMatrix = matrix1.isSkewSymmetric();
+    const isIdentityMatrix = matrix1.isIdentity();
+    const isUpperTriangularMatrix = matrix1.isUpperTriangular();
+    const isLowerTriangularMatrix = matrix1.isLowerTriangular();
+    const isDiagonalMatrix = matrix1.isDiagonal();
+    const isOrthogonalMatrix = matrix1.isOrthogonal();
+    const isUnitaryMatrix = matrix1.isUnitary();
+    const isZeroMatrix = matrix1.isZero();
+    const isScalarMatrix = matrix1.isScalar();
+    const isRowEchelonMatrix = matrix1.isRowEchelon();
+    const rankValue = matrix1.rank();
+    const adjointMatrix = matrix1.adjoint();
+    const magicSquareMatrix = Matrix.magicSquare();
+    const traceValue = matrix1.trace();
+    // Print results
+    console.log('Matrix 1:', matrix1);
+    console.log('Matrix 2:', matrix2);
+    console.log('Scalar:', scalar);
+    console.log('Size:', size);
+    console.log('Determinant:', determinant);
+    console.log('Inverse:', inverse);
+    console.log('Sum:', sum);
+    console.log('Difference:', difference);
+    console.log('Divided:', divided);
+    console.log('Product:', product);
+    console.log('Transposed:', transposed);
+    console.log('Is Square:', isSquareMatrix);
+    console.log('Is Symmetric:', isSymmetricMatrix);
+    console.log('Is Skew Symmetric:', isSkewSymmetricMatrix);
+    console.log('Is Identity:', isIdentityMatrix);
+    console.log('Is Upper Triangular:', isUpperTriangularMatrix);
+    console.log('Is Lower Triangular:', isLowerTriangularMatrix);
+    console.log('Is Diagonal:', isDiagonalMatrix);
+    console.log('Is Orthogonal:', isOrthogonalMatrix);
+    console.log('Is Unitary:', isUnitaryMatrix);
+    console.log('Is Zero:', isZeroMatrix);
+    console.log('Is Scalar:', isScalarMatrix);
+    console.log('Is Row Echelon:', isRowEchelonMatrix);
+    console.log('Rank:', rankValue);
+    console.log('Adjoint:', adjointMatrix);
+    console.log('Magic Square:', magicSquareMatrix);
+    console.log('Trace:', traceValue);</code></pre>
+        <h2>Output</h2>
+        <pre>
+    Matrix 1: Matrix { matrix: [ [ 1, 2 ], [ 3, 4 ] ], row: 2, column: 2 }
+    Matrix 2: Matrix { matrix: [ [ 5, 6 ], [ 7, 8 ] ], row: 2, column: 2 }      
+    Scalar: 2
+    Determinant: -2
+    Inverse: Matrix { matrix: [ [ -0.5, 1 ], [ 1.5, -2 ] ], row: 2, column: 2 } 
+    Sum: Matrix { matrix: [ [ 6, 8 ], [ 10, 12 ] ], row: 2, column: 2 }
+    Difference: Matrix { matrix: [ [ -4, -4 ], [ -4, -4 ] ], row: 2, column: 2 }
+    Divided: Matrix { matrix: [ [ 0.5, 1 ], [ 1.5, 2 ] ], row: 2, column: 2 }   
+    Product: Matrix { matrix: [ [ 19, 22 ], [ 43, 50 ] ], row: 2, column: 2 }   
+    Transposed: Matrix { matrix: [ [ 1, 3 ], [ 2, 4 ] ], row: 2, column: 2 }    
+    Is Square: true
+    Is Symmetric: false
+    Is Skew Symmetric: false
+    Is Identity: false
+    Is Upper Triangular: false
+    Is Lower Triangular: false
+    Is Diagonal: false
+    Is Orthogonal: true
+    Is Unitary: true
+    Is Zero: false
+    Is Scalar: false
+    Is Row Echelon: true
+    Rank: 2
+    Adjoint: Matrix { matrix: [ [ 1, 2 ], [ 3, 4 ] ], row: 2, column: 2 }
+    Magic Square: false
+    Trace: 5</pre>
+
+    </section>
+    <footer>
+        Mathlib-n &copy; 2023 Maruf Hasan
+    </footer>
+</body>
+<link rel="stylesheet" href="hl.css">
+<script src="iconmaker.js"></script>
+<script src="hl.js"></script>
+<script>hljs.highlightAll();
+    //add line numbers
+    setTimeout(function () {
+        document.querySelectorAll('pre code.language-javascript').forEach((block) => {
+            let lines = block.innerHTML.split(/\n/);
+            lines.forEach((line, index) => {
+                lines[index] = `<span class="index">${index + 1}</span>${line}`;
+            });
+            block.innerHTML = lines.join('\n');
+        });
+    }, 100);
+    //add a copy button to code blocks
+    setTimeout(function () {
+        document.querySelectorAll('pre.code').forEach((block) => {
+            copyBtn(block)
+        });
+    }, 100);
+</script>
+<script src="../common.js"></script>
+
+</html>

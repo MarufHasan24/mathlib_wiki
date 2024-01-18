@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constants</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        table {
+            display: table;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            text-align: left;
+        }
+
+        td {
+            padding: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="bg"><span class="math">mathlibjs</span><span class="math">nodejs</span><span class="math">mathlib-n</span><span class="math">nodejs</span><span class="math">mathjs</span><span class="math">math library</span><span class="math">mathlib-n</span><span class="math">mathlib-n</span><span class="math">mathlibjs</span><span class="math">math</span><span class="math">mathlib-n</span><span class="math">mathjs</span><span class="math">mathjs</span><span class="math">math</span><span class="math">math</span><span class="math">math library</span><span class="math">mathjs</span><span class="math">math library</span><span class="math">mathlib-n</span><span class="math">nodejs</span><span class="math">nodejs</span><span class="math">math</span><span class="math">mathlib-n</span><span class="math">mathlib-n</span><span class="math">math library</span><span class="math">math library</span><span class="math">math</span><span class="math">mathlibjs</span><span class="math">math</span><span class="math">mathlib-n</span></div>
+    <div id="sidebar" class="hide">
+        <a href="javascript:void(0)" id="navbtn">&#9776;</a>
+        <ul class="list">
+            <li><a href="wiki.html">Wiki</a></li>
+            <li><a href="functions.html">Functions</a></li>
+            <li><a class="self" href="constants.html">Constants</a></li>
+            <li><a href="vector.html">Vector</a></li>
+            <li><a href="matrix.html">Matrix</a></li>
+        </ul>
+    </div>
+    <header>
+        <h1>Mathlib-n constants</h1>
+    </header>
+    <section>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Full form</th>
+                <th>Symbol</th>
+                <th>Value</th>
+            </tr>
+            <tr data-title="B3"></tr>
+            <tr data-title="Ce"></tr>
+            <tr data-title="Cp"></tr>
+            <tr data-title="F"></tr>
+            <tr data-title="G"></tr>
+            <tr data-title="G0"></tr>
+            <tr data-title="G1"></tr>
+            <tr data-title="K"></tr>
+            <tr data-title="Me"></tr>
+            <tr data-title="Mn"></tr>
+            <tr data-title="Mp"></tr>
+            <tr data-title="Na"></tr>
+            <tr data-title="Phi"></tr>
+            <tr data-title="Ri"></tr>
+            <tr data-title="W"></tr>
+            <tr data-title="c"></tr>
+            <tr data-title="c12"></tr>
+            <tr data-title="g"></tr>
+            <tr data-title="gM"></tr>
+            <tr data-title="gMr"></tr>
+            <tr data-title="ge"></tr>
+            <tr data-title="h"></tr>
+            <tr data-title="mE"></tr>
+        </table>
+    </section>
+    <footer>
+        Mathlib-n &copy; 2023 Maruf Hasan
+    </footer>
+</body>
+<script src="../common.js"></script>
+<script>
+    fetch("constants.json")
+        .then((res) => res.json())
+        .then((data) => {
+            let dataArray = Object.keys(data);
+            for (let i = 1; i < dataArray.length; i++) {
+                let trs = document.querySelectorAll(
+                    "table tr"
+                )[i];
+                let dataTitle = trs.dataset.title;
+                trs.innerHTML += `<td class="title">
+                <span>${data[dataTitle].title}</span>
+              </td>
+              <td class="name">
+                <span>${data[dataTitle].name}</span>
+              </td>
+              <td class="symbol">
+                <span><i style="font-size:21px;">${data[dataTitle].symbol}</i></span>
+              </td>
+              <td class="value">
+                <span>${data[dataTitle].value}</span>
+              </td>`;
+            }
+        });
+</script>
+
+</html>
