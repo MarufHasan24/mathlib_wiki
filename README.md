@@ -2,38 +2,23 @@
 
 ## Overview
 
-Mathlib is a comprehensive library designed to provide essential mathematical functions and utilities for both JavaScript (JS) and C++. Whether you are working on web development projects or building high-performance applications, Mathlib aims to simplify mathematical operations and enhance your coding experience.
+Mathlib is a versatile and efficient mathematical library designed for use in both Node.js and C++. It provides a comprehensive set of mathematical functions and utilities to simplify complex calculations and enhance the mathematical capabilities of your applications.
 
 ## Features
 
-### Cross-Language Compatibility
+- **Cross-Language Compatibility:** Mathlib is seamlessly integrated into both Node.js and C++, allowing you to use the same set of functions across different environments.
 
-Mathlib is available for both JavaScript and C++, making it versatile for a wide range of applications. Use the same set of mathematical functions seamlessly in your frontend and backend code.
+- **Extensive Functionality:** The library covers a wide range of mathematical operations, including basic arithmetic, trigonometry, linear algebra, statistics, and more.
 
-### Core Mathematical Functions
+- **Performance Optimization:** Mathlib is optimized for performance, utilizing efficient algorithms and data structures to ensure fast and reliable mathematical computations.
 
-Mathlib covers a variety of core mathematical functions, including:
-
-- Basic arithmetic operations (addition, subtraction, multiplication, division)
-- Trigonometric functions (sine, cosine, tangent)
-- Exponential and logarithmic functions
-- Statistical functions (mean, median, standard deviation)
-
-### Vector and Matrix Operations
-
-Simplify vector and matrix manipulations with Mathlib's convenient functions:
-
-- Vector addition, subtraction, and scalar multiplication
-- Matrix multiplication and inversion
-- Determinant and eigenvalue calculations
-
-### Random Number Generation
-
-Generate random numbers with ease using Mathlib's built-in random number functions. It provides both uniform and normal distribution options for a wide range of applications.
+- **Easy Integration:** With a simple and intuitive API, Mathlib is easy to integrate into your projects. Whether you are working on a web application in Node.js or a native C++ application, Mathlib provides a consistent interface.
 
 ## Getting Started
 
-### nodejs
+### Node.js
+
+To use Mathlib in your Node.js project, follow these steps:
 
 1. Install Mathlib using npm:
 
@@ -41,40 +26,72 @@ Generate random numbers with ease using Mathlib's built-in random number functio
    npm install mathlib
    ```
 
-2. Import Mathlib in your JavaScript code:
+2. Require Mathlib in your JavaScript file:
 
    ```javascript
    const mathlib = require('mathlib');
    ```
 
-3. Start using Mathlib functions in your project:
+3. Start using Mathlib functions in your code:
 
    ```javascript
-   const result = mathlib.add(5, 3);
-   console.log(result); // Output: 8
+   const result = mathlib.add(2, 3);
+   console.log(result); // Output: 5
    ```
 
 ### C++
 
-1. Include Mathlib in your C++ project:
+To integrate Mathlib into your C++ project, follow these steps:
 
-   ```cpp
-   #include "mathlib.h"
+1. Clone the Mathlib repository:
+
+   ```bash
+   git clone https://github.com/MarufHasan24/mathlib-cpp.git
    ```
 
-2. Start using Mathlib functions in your C++ code:
+2. Build the Mathlib library:
+
+   ```bash
+   cd mathlib
+   mkdir build
+   cd build
+   cmake ..
+   make
+   ```
+
+3. Link Mathlib with your C++ application by adding the following to your CMakeLists.txt:
+
+   ```cmake
+   target_link_libraries(your_project_name PRIVATE mathlib)
+   ```
+
+4. Include Mathlib headers in your C++ source code:
 
    ```cpp
-   #include <iostream>
-   using namespace std;
+   #include "./PATH-TO-MATHLIB/mathlib.h"
+   ```
 
-   int main() {
-       double result = mathlib::add(5, 3);
-       cout << result << endl; // Output: 8
-       return 0;
-   }
+5. Start using Mathlib functions in your code:
+
+   ```cpp
+   int result = mlb::add(2, 3);
+   std::cout << result << std::endl; // Output: 5
    ```
 
 ## Documentation
 
-For detailed information on all available functions and usage examples, refer to the [Mathlib Documentation](https://marufhasan24.github.io/mathlib_wiki/)
+For detailed information on Mathlib functions and usage, refer to the [documentation](https://marufhasan24.github.io/mathlib_wiki/index.html)
+
+## Contributions
+
+Contributions to Mathlib are welcome! If you find a bug, have a feature request, or would like to contribute to the library, please check our [contribution guidelines](CONTRIBUTING.md).
+
+## License
+
+Mathlib is distributed under the [MIT License](LICENSE). Feel free to use, modify, and distribute the library in your projects.
+
+## Contact
+
+If you have any questions or issues, please feel free to reach out to us at [gamerid703@gmail.com](mailto:gamerid703@gmail.com).
+
+Happy coding with Mathlib!
