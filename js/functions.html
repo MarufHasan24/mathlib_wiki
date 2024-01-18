@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <div id="bg"><span class="math">math</span><span class="math">mathlibjs</span><span class="math">mathjs</span><span class="math">matametics</span><span class="math">mathjs</span><span class="math">nodejs</span><span class="math">nodejs</span><span class="math">mathlib-n</span><span class="math">math</span><span class="math">mathlib-n</span><span class="math">nodejs</span><span class="math">mathjs</span><span class="math">nodejs</span><span class="math">nodejs</span><span class="math">math</span><span class="math">math</span><span class="math">matametics</span><span class="math">mathlibjs</span><span class="math">math</span><span class="math">matametics</span><span class="math">math</span><span class="math">mathlib-n</span><span class="math">math</span><span class="math">mathlibjs</span><span class="math">mathlibjs</span><span class="math">mathlibjs</span><span class="math">mathlib-n</span><span class="math">mathlib-n</span><span class="math">math library</span><span class="math">mathlibjs</span></div>
+    <div id="sidebar" class="hide">
+        <a href="javascript:void(0)" id="navbtn">&#9776;</a>
+        <ul class="list">
+            <li><a href="wiki.html">Wiki</a></li>
+            <li><a class="self" href="functions.html">Functions</a></li>
+            <li><a href="constants.html">Constants</a></li>
+            <li><a href="vector.html">Vector</a></li>
+            <li><a href="matrix.html">Matrix</a></li>
+        </ul>
+    </div>
+    <header>
+        <h1>Mathlib-n Functions</h1>
+    </header>
+    <section>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>input</th>
+                <th>works</th>
+            </tr>
+            <tr data-title="GCD"></tr>
+            <tr data-title="LCM"></tr>
+            <tr data-title="add"></tr>
+            <tr data-title="age"></tr>
+            <tr data-title="asIntRatio"></tr>
+            <tr data-title="avg"></tr>
+            <tr data-title="c2Fr"></tr>
+            <tr data-title="c2fr"></tr>
+            <tr data-title="caller"></tr>
+            <tr data-title="cm2In"></tr>
+            <tr data-title="combo"></tr>
+            <tr data-title="cosec"></tr>
+            <tr data-title="cosx"></tr>
+            <tr data-title="cot"></tr>
+            <tr data-title="dcm2Deg"></tr>
+            <tr data-title="deMemo"></tr>
+            <tr data-title="deg2Dcm"></tr>
+            <tr data-title="deg2Rad"></tr>
+            <tr data-title="delMemo"></tr>
+            <tr data-title="delRecord"></tr>
+            <tr data-title="difrn"></tr>
+            <tr data-title="div"></tr>
+            <tr data-title="fact"></tr>
+            <tr data-title="fr2C"></tr>
+            <tr data-title="fr2c"></tr>
+            <tr data-title="fract"></tr>
+            <tr data-title="ft2M"></tr>
+            <tr data-title="getRecord"></tr>
+            <tr data-title="in2Cm"></tr>
+            <tr data-title="intersect"></tr>
+            <tr data-title="km2Mile"></tr>
+            <tr data-title="leapYear"></tr>
+            <tr data-title="limit"></tr>
+            <tr data-title="lineWidth"></tr>
+            <tr data-title="linearEq"></tr>
+            <tr data-title="logx"></tr>
+            <tr data-title="m2Ft"></tr>
+            <tr data-title="memo"></tr>
+            <tr data-title="mile2Km"></tr>
+            <tr data-title="mul"></tr>
+            <tr data-title="multiply"></tr>
+            <tr data-title="odd"></tr>
+            <tr data-title="permut"></tr>
+            <tr data-title="polyArea"></tr>
+            <tr data-title="prime"></tr>
+            <tr data-title="quad"></tr>
+            <tr data-title="quadAngles"></tr>
+            <tr data-title="quadArea"></tr>
+            <tr data-title="quadCorners"></tr>
+            <tr data-title="quadLines"></tr>
+            <tr data-title="qudrt"></tr>
+            <tr data-title="rad2Deg"></tr>
+            <tr data-title="rand"></tr>
+            <tr data-title="read"></tr>
+            <tr data-title="recList"></tr>
+            <tr data-title="restore"></tr>
+            <tr data-title="rootx"></tr>
+            <tr data-title="sec"></tr>
+            <tr data-title="sinx"></tr>
+            <tr data-title="sub"></tr>
+            <tr data-title="sum"></tr>
+            <tr data-title="sums"></tr>
+            <tr data-title="tanx"></tr>
+            <tr data-title="tringle"></tr>
+            <tr data-title="tringleAngles"></tr>
+            <tr data-title="tringleArea"></tr>
+            <tr data-title="tringleLines"></tr>
+            <tr data-title="tringleMed"></tr>
+            <tr data-title="trushList"></tr>
+            <tr data-title="union"></tr>
+        </table>
+    </section>
+    <footer>
+        Mathlib-n &copy; 2023 Maruf Hasan
+    </footer>
+</body>
+<script src="../common.js"></script>
+<script>
+    fetch("functions.json")
+        .then((res) => res.json())
+        .then((data) => {
+            let dataArray = Object.keys(data);
+            for (let i = 1; i < dataArray.length; i++) {
+                let trs = document.querySelectorAll("table tr")[i];
+                let dataTitle = trs.dataset.title;
+                let des = data[dataTitle].des ? `<br />(${data[dataTitle].des})` : "";
+                let inputDataArray = data[dataTitle].input.data;
+                var inputString = "";
+                var workString = `It will <i style="text-decoration : underline;">${data[
+                    dataTitle
+                ].work.Mwork[0].toLowerCase()}${data[dataTitle].work.Mwork.substr(
+                    1
+                )}</i>`;
+                let Rtype = data[dataTitle].work.Rtype
+                    ? `<b>${data[dataTitle].work.Rtype}</b>`
+                    : "a number";
+                for (let n = 0; n < inputDataArray.length; n++) {
+                    let localDataInputType;
+                    if (
+                        !data[dataTitle].input.Type ||
+                        data[dataTitle].input.Type[n] === "Number" ||
+                        data[dataTitle].input.Type[n] === "number"
+                    ) {
+                        localDataInputType = "a number";
+                        inputString += `<li>) ${inputDataArray[n]} as ${localDataInputType}</li>`;
+                    } else {
+                        localDataInputType = data[dataTitle].input.Type[n]
+                            ? `<i style="font-weight: bold">${data[dataTitle].input.Type[n]}</i>`
+                            : "a number";
+                        inputString += `<li>) ${inputDataArray[n]} as ${localDataInputType}</li>`;
+                    }
+                }
+                trs.innerHTML += `<td class="title"><p>${data[dataTitle].title}()${des}</p></p></td><td class="input"><ol style="list-style-type: decimal">${inputString}</ol></td><td class="works"><p>${workString} ${data[dataTitle].work.work} and then return the result as ${Rtype}</p></td>`;
+            }
+        });
+</script>
+
+</html>

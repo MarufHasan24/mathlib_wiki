@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="../style.css" rel="stylesheet">
+
+<head>
+    <title>Vector Constructor Documentation : Mathlib-n</title>
+    <style>
+        button.cpy-btn {
+            background-color: #ffffff;
+            color: #2e2e2e;
+            padding: 5px;
+            text-decoration: none;
+            float: right;
+            border: none;
+            transition: 0.3s;
+        }
+
+        button.cpy-btn:hover {
+            background-color: #2e2e2e;
+            color: #ffffff;
+        }
+    </style>
+    <link rel="stylesheet" href="hl.css" />
+</head>
+
+<body>
+    <div id="bg"><span class="math">math</span><span class="math">math library</span><span class="math">math</span><span class="math">math</span><span class="math">nodejs</span><span class="math">matametics</span><span class="math">math</span><span class="math">mathlib-n</span><span class="math">math</span><span class="math">math</span><span class="math">mathjs</span><span class="math">math</span><span class="math">mathlib-n</span><span class="math">mathlib</span><span class="math">mathlibjs</span><span class="math">mathlib</span><span class="math">nodejs</span><span class="math">nodejs</span><span class="math">matametics</span><span class="math">mathlib-n</span><span class="math">nodejs</span><span class="math">math library</span><span class="math">math library</span><span class="math">mathlib-n</span><span class="math">nodejs</span><span class="math">matametics</span><span class="math">mathlib-n</span><span class="math">mathlibjs</span><span class="math">mathjs</span><span class="math">nodejs</span></div>
+    <div id="sidebar" class="hide">
+        <a href="javascript:void(0)" id="navbtn">&#9776;</a>
+        <ul class="list">
+            <li><a href="../index.html">Mathlib</a></li>
+<li><a href="index.html">Home</a></li>
+            <li><a href="./../author.html">Author</a></li>
+            <li><a href="wiki.html">Wiki</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="more.html">More</a></li>
+            <li><a class="self" href="vector.html">Vector</a></li>
+            <li><a href="matrix.html">Matrix</a></li>
+            <li><a href="troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+    </div>
+    <header>
+        <h1>Vector Constructor</h1>
+    </header>
+    <section>
+        <h2>Overview</h2>
+        <p>
+            The vector constructor is a JavaScript class that represents a mathematical vector in 2D or 3D space. It
+            provides various functions for creating, manipulating, and inspecting vectors.
+        </p>
+        <h2>Usage</h2>
+        <p>
+            To create a new vector, you can call the constructor with either an array of numeric values or two or three
+            numeric arguments, depending on whether you want to create a 2D or 3D vector. For example:
+        </p>
+        <p>
+            There are two ways to call the constructor. You can import the Vector class only from the mathlib-n module.
+            This is the recommended way to use the constructor, if you are calculating only Vector operations.
+        </p>
+        <pre class="code"><code class="language-javascript"> const { Vector } = require('mathlib-n');
+// Create a 2D vector with x = 1, y = 2
+const vec2 = new Vector(1, 2);
+// Create a 3D vector with x = 1, y = 2, z = 3
+const vec3 = new Vector(1, 2, 3);</code></pre>
+        <p>
+            Alternatively, you can import the entire mathlib-n module. This is the recommended way to use the
+            constructor, if
+            you are calculating all types of math operations. <i>Here for example I used the 1st method.</i>
+        </p>
+        <pre class="code"><code class="language-javascript"> const math = require('mathlib-n');
+const vec2 = new math.Vector(1, 2);
+const vec3 = new math.Vector(1, 2, 3);</code></pre>
+        <p>
+            Let's see how to use the Vector class.
+        </p>
+        <pre class="code"><code class="language-javascript">const vec2 = new Vector(1, 2);
+const vec3 = new Vector(3,4);</code></pre>
+        <h2>Functions</h2>
+        <h3><code>value</code></h3>
+        <p>Get the value of the vector.</p>
+        <pre class="code"><code class="language-javascript">const val = vector.value();</code></pre>
+        <h3><code>add</code></h3>
+        <p>Add two vectors together and return the result.</p>
+        <pre class="code"><code class="language-javascript"> const result = vector1.add(vector2);</code></pre>
+        <h3><code>sub</code></h3>
+        <p>Subtract one vector from another and return the result.</p>
+        <pre class="code"><code class="language-javascript"> const result = vector1.sub(vector2);</code></pre>
+        <h3><code>dot</code></h3>
+        <p>Calculate the dot product of two vectors.</p>
+        <pre class="code"><code class="language-javascript"> const product = vector1.dot(vector2);</code></pre>
+        <h3><code>cross</code></h3>
+        <p>Calculate the cross product of two vectors.</p>
+        <pre class="code"><code class="language-javascript"> const product = vector1.cross(vector2);</code></pre>
+        <h3><code>div</code></h3>
+        <p>Divide the vector by a scalar value.</p>
+        <pre class="code"><code class="language-javascript"> const result = vector.div(scalar);</code></pre>
+        <h3><code>angle</code></h3>
+        <p>Calculate the angle between two vectors in radians.</p>
+        <pre class="code"><code class="language-javascript"> const angle = vector1.angle(vector2);</code></pre>
+        <h3><code>equals</code></h3>
+        <p>Check if two vectors are equal.</p>
+        <pre class="code"><code class="language-javascript"> const isEqual = vector1.equals(vector2);</code></pre>
+        <h3><code>toString</code></h3>
+        <p>Convert the vector to a string representation.</p>
+        <pre class="code"><code class="language-javascript"> const str = vector.toString();</code></pre>
+        <h3><code>toArray</code></h3>
+        <p>Convert the vector to an array.</p>
+        <pre class="code"><code class="language-javascript"> const arr = vector.toArray();</code></pre>
+        <h2>Example Usage</h2>
+        <pre class="code"><code class="language-javascript"> // Create vectors
+    const vector1 = new Vector(2, 3, 5);
+    const vector2 = new Vector(4, 5);
+    // Perform vector operations
+    const sum = vector1.add(vector2);
+    const difference = vector1.sub(vector2);
+    const dotProduct = vector1.dot(vector2);
+    const crossProduct = vector1.cross(vector2);
+    const divided = vector1.div(2);
+    const angle = vector1.angle(vector2);
+    const areEqual = vector1.equals(vector2);
+    const stringRep = vector1.toString();
+    const arrayRep = vector1.toArray();
+    // Print results
+    console.log("Vector 1:", vector1);
+    console.log("Vector 2:", vector2);
+    console.log("Sum:", sum);
+    console.log("Difference:", difference);
+    console.log("Dot Product:", dotProduct);
+    console.log("Cross Product:", crossProduct);
+    console.log("Divided:", divided);
+    console.log("Angle:", angle);
+    console.log("Are Equal:", areEqual);
+    console.log("String Representation:", stringRep);
+    console.log("Array Representation:", arrayRep);</code></pre>
+
+        <h2>Output</h2>
+        <pre>
+    Vector 1: Vector { x: 2, y: 3, z: 5 }
+    Vector 2: Vector { x: 4, y: 5, z: 0 }
+    Sum: Vector { x: 6, y: 8, z: 5 }
+    Difference: Vector { x: -2, y: -2, z: 5 }
+    Dot Product: 23
+    Cross Product: Vector { x: -25, y: 20, z: -2 }
+    Divided: Vector { x: 1, y: 1.5, z: 2.5 }
+    Angle: 0.582698780728861
+    Are Equal: false
+    String Representation: 2i+3j+5k
+    Array Representation: [ 2, 3, 5 ]</pre>
+    </section>
+    <footer>
+        Mathlib-n &copy; 2023 Maruf Hasan
+    </footer>
+</body>
+<script src="hl.js"></script>
+<script src="iconmaker.js"></script>
+<script>hljs.highlightAll();
+    //add line numbers
+    setTimeout(function () {
+        document.querySelectorAll('pre code.language-javascript').forEach((block) => {
+            let lines = block.innerHTML.split(/\n/);
+            lines.forEach((line, index) => {
+                lines[index] = `<span class="index">${(index + 1)}</span>${line}`;
+            });
+            block.innerHTML = lines.join('\n');
+        });
+    }, 100);
+    //add a copy button to code blocks
+    setTimeout(function () {
+        document.querySelectorAll('pre.code').forEach((block) => {
+            copyBtn(block)
+        });
+    }, 100)
+</script>
+<script src="../common.js"></script>
+
+</html>
